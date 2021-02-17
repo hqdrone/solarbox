@@ -5,9 +5,51 @@ html
 		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
 		title
 		link(rel="stylesheet", href="css/bootstrap-reboot.min.css")
+		link(rel="preconnect" href="https://fonts.gstatic.com")
+		link(href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet")
 		link(rel="stylesheet", href="css/main.css")
 	body
 
+		header.header
+			.container
+				.header__flex
+					.header__logo
+						a(href="")
+							img(src="img/logo.svg", alt="")
+					nav.header__nav
+						ul
+							li: a(href="") About us
+							li: a(href="") Projects
+							li: a(href="") SCP
+							li: a(href="") Contact
+					.header__lang
+						a(href="") EN
+					.header__burger.header-burger
+						.header-burger__line
+						.header-burger__line
+						.header-burger__line
+
+		.mobile
+			.mobile__close.mobile-close
+				.mobile-close__line
+				.mobile-close__line
+			.mobile__nav
+				ul
+					li: a(href="") About us
+					li: a(href="") Projects
+					li: a(href="") SCP
+					li: a(href="") Contact
+
+		section.hero
+			.container
+				.hero__body
+					.hero__title SolarBox
+					.hero__text We build sustainable environment
+					.hero__play
+						a(href="")
+							img(src="img/play.svg", alt="")
+					.hero__scrolldown
+						img(src="img/scrolldown.svg", alt="")
 
 
 		//- Scripts

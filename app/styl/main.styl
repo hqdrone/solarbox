@@ -1,0 +1,182 @@
+tr()
+	transition .25s
+
+body
+	font-family: 'Poppins', sans-serif;
+
+.container
+	max-width 1332px
+	margin 0 auto
+	padding 0 16px
+
+// Header
+.header
+	position fixed
+	z-index 9999
+	top 0
+	left 0
+	right 0
+	padding 24px 0
+	tr()
+	&_active
+		background #EF3527
+	&__flex
+		display flex
+		align-items center
+	&__logo
+		flex 25%
+		img
+			max-width 100%
+			display block
+	&__nav
+		flex 50%
+		ul
+			margin 0
+			padding 0
+			display flex
+			align-items center
+			list-style none
+			justify-content center
+			li
+				&:not(:last-child)
+					margin-right 32px
+				a
+					color #fff
+					text-transform uppercase
+					text-decoration none
+					font-size 18px
+					line-height (30/18)
+	&__lang
+		flex 25%
+		text-align right
+		a
+			position relative
+			display inline-flex
+			align-items center
+			color #fff
+			font-size 18px
+			line-height (30/18)
+			&:after
+				content ''
+				display block
+				margin-left 6px
+				width 15px
+				height 11px
+				background url('../img/dropdown.svg')
+	&__burger
+		margin-left 32px
+		display none
+	&-burger
+		cursor pointer
+		&__line
+			height 3px
+			width 36px
+			background #fff
+			display block
+			&:not(:last-child)
+				margin-bottom 6px
+
+// Mobile
+.mobile
+	position fixed
+	top 0
+	right 0
+	bottom 0
+	background #EF3527
+	padding 36px
+	z-index 10000
+	max-width 290px
+	width 100%
+	tr()
+	display none
+	transform translateX(100%)
+	&_active
+		transform translateX(0)
+	&__close
+		margin-bottom 16px
+	&-close
+		width 48px
+		height 48px
+		position relative
+		cursor pointer
+		margin-left auto
+		&__line
+			height 3px
+			width 36px
+			background #fff
+			display block
+			position absolute
+			top 50%
+			left 5px
+			&:first-child
+				transform rotate(45deg)
+			&:last-child
+				transform rotate(-45deg)
+	&__nav
+		ul
+			margin 0
+			padding 0
+			list-style none
+			li
+				&:not(:last-child)
+					margin-right 32px
+				a
+					color #fff
+					text-transform uppercase
+					text-decoration none
+					font-size 18px
+					line-height (30/18)
+
+// Hero
+.hero
+	min-height 100vh
+	background url('../img/hero.jpg') no-repeat center center
+	background-size cover
+	padding-top 326px
+	padding-bottom 164px
+	position relative
+	&__body
+		display flex
+		flex-direction column
+		align-items center
+		color #fff
+	&__title
+		font-size 95px
+		line-height (73/95)
+		font-weight 600
+		margin-bottom 20px
+	&__text
+		font-size 30px
+		line-height (42/30)
+		margin-bottom 60px
+		text-align center
+	&__play
+		position relative
+		height 132px
+		width 132px
+		background rgba(#000,.2)
+		border-radius 50%
+		display flex
+		align-items center
+		justify-content center
+		a
+			height 78px
+			width 78px
+			background #fff
+			display flex
+			align-items center
+			justify-content center
+			border-radius 50%
+			tr()
+			&:hover
+				transform scale(1.1)
+
+	&__scrolldown
+		position absolute
+		bottom 32px
+		left 0
+		right 0
+		display flex
+		justify-content center
+
+@import media
